@@ -1,6 +1,39 @@
-# Skillhatch
+# 🎓 Skillhatch
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+
+Skillhatch is a modular learning & rewards platform designed to help learners progress through structured programs, unlock badges, and redeem rewards. It also provides an admin interface for managing content and a robust API for automation and extensibility.
+
+---
+
+## 🔥 Key Features
+
+- 👨‍🎓 Learner App (React + Apollo + Tailwind)
+- 🛠️ Admin CMS (KeystoneJS with GraphQL API)
+- 🧬 GraphQL API (Keystone + custom business logic)
+- 🪄 Badge & Reward Logic (Unlock, Track, Redeem)
+- 🔁 Cron Scripts (Badge grants, reward syncs)
+- 🚀 Infrastructure-ready (CI/CD + IaC planned)
+- 🧰 Modular monorepo architecture using Nx
+
+---
+
+## 🧩 App Structure
+
+````bash
+skillhatch/
+├── apps/
+│   ├── frontend/           # React learner app
+│   ├── admin-cms/          # KeystoneJS admin dashboard & API
+│   ├── api-gateway/        # Optional API BFF for composition (future)
+│   └── scripts/            # Utility + cron jobs
+├── libs/
+│   ├── ui/                 # Shared UI components
+│   ├── types/              # Shared types
+│   ├── logic/              # Badge, rewards, program logic
+├── infra/                  # IaC (Terraform/CDK)
+├── .github/                # CI workflows
+└── README.md
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
@@ -10,7 +43,7 @@
 
 ```sh
 npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
-```
+````
 
 ## Run tasks
 
@@ -97,12 +130,13 @@ Nx Console is an editor extension that enriches your developer experience. It le
 
 Learn more:
 
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 And join the Nx community:
+
 - [Discord](https://go.nx.dev/community)
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
